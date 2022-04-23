@@ -170,6 +170,7 @@ output_dir.mkdir(exist_ok=True, parents=True)
 
 for directory in content_dir.iterdir():
     dir_name = directory.name
+    print(dir_name)
 
     new_directory = output_dir / dir_name
     new_directory.mkdir(exist_ok=True, parents=True)
@@ -198,5 +199,5 @@ for directory in content_dir.iterdir():
             cur_style = cur_style.to('cpu')
 
             save_image(output, output_path)
-            print(output_path)
+            # print(output_path)
 

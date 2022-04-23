@@ -108,8 +108,7 @@ else:
     # style_paths = [f for f in style_dir.glob('*')]
 
 if not os.path.exists(output_dir):
-    os.mkdir(output_dir)
-
+    output_dir.mkdir(exist_ok=True, parents=True)
 
 vgg = StyTR.vgg
 vgg.load_state_dict(torch.load(args.vgg))
